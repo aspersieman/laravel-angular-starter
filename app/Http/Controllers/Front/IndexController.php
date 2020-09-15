@@ -13,6 +13,6 @@ class IndexController extends Controller
      */
     public function index()
     {
-      return view('front.index');
+        return \File::get(public_path() . '/app/index.html');
     }
 }

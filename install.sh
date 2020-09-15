@@ -14,7 +14,10 @@ fi
 # Install/update composer dependecies
 php composer.phar install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 
-mysql --user=root --password=${PASSWORD} -e "CREATE DATABASE nicolaas"
+mysql --user=root --password=${PASSWORD} -e "CREATE DATABASE laravel_angular_starter"
+
+# Create application key
+sudo php artisan key:generate
 
 # Run database migrations
 php artisan migrate --force
